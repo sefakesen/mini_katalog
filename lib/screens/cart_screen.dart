@@ -130,7 +130,6 @@ class CartScreen extends StatelessWidget {
         return Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // Ürün Küçük Görseli (Thumbnail)
             Container(
               width: 68,
               height: 68,
@@ -143,8 +142,6 @@ class CartScreen extends StatelessWidget {
               child: ProductImage(product: product),
             ),
             const SizedBox(width: 14),
-
-            // Ürün Başlığı, Açıklaması ve Fiyatı
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -196,8 +193,6 @@ class CartScreen extends StatelessWidget {
                 ],
               ),
             ),
-
-            // Miktar Azaltma / Çıkarma Butonu
             IconButton(
               icon: Container(
                 padding: const EdgeInsets.all(4),
@@ -266,8 +261,6 @@ class CartScreen extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 12),
-
-            // Eğer doluysa toplam tutar satırı
             if (!isEmpty) ...[
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -292,8 +285,6 @@ class CartScreen extends StatelessWidget {
               ),
               const SizedBox(height: 12),
             ],
-
-            // Siyah Checkout Butonu
             SizedBox(
               width: double.infinity,
               height: 52,

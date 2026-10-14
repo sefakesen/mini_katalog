@@ -105,7 +105,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          // Alt Başlık (Find your perfect device.)
                           const Text(
                             'Find your perfect device.',
                             style: TextStyle(
@@ -115,8 +114,6 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                           const SizedBox(height: 16),
-
-                          // Arama Çubuğu (Search products)
                           Container(
                             decoration: BoxDecoration(
                               color: const Color(0xFFF3F4F6),
@@ -163,15 +160,11 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                           ),
-
-                          // Banner Görseli / Kartı (GIFT STORE)
                           const BannerCard(),
                         ],
                       ),
                     ),
                   ),
-
-                  // Ürün Izgarası (GridView)
                   if (_filteredProducts.isEmpty)
                     SliverFillRemaining(
                       hasScrollBody: false,

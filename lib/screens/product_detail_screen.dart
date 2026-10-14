@@ -63,7 +63,6 @@ class ProductDetailScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Büyük Ürün Görseli (Hero Animasyonlu & Hafif gri zeminli)
               Center(
                 child: Container(
                   width: double.infinity,
@@ -83,8 +82,6 @@ class ProductDetailScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 24),
-
-              // Ürün İsmi
               Text(
                 effectiveProduct.name,
                 style: const TextStyle(
@@ -95,8 +92,6 @@ class ProductDetailScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 4),
-
-              // Slogan / Tagline
               Text(
                 effectiveProduct.tagline,
                 style: const TextStyle(
@@ -106,8 +101,6 @@ class ProductDetailScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 22),
-
-              // Açıklama Başlığı (Description)
               const Text(
                 'Description',
                 style: TextStyle(
@@ -117,8 +110,6 @@ class ProductDetailScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 8),
-
-              // Açıklama Metni
               Text(
                 effectiveProduct.description,
                 style: const TextStyle(
@@ -128,8 +119,6 @@ class ProductDetailScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 24),
-
-              // Teknik Özellikler Başlığı (Specifications)
               if (effectiveProduct.specs.isNotEmpty) ...[
                 const Text(
                   'Specifications',
@@ -140,8 +129,6 @@ class ProductDetailScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 12),
-
-                // Özellik Kutucukları (Spec Chips)
                 Wrap(
                   spacing: 10,
                   runSpacing: 10,
@@ -158,8 +145,6 @@ class ProductDetailScreen extends StatelessWidget {
           ),
         ),
       ),
-
-      // Alt Buton Alanı (Fiyat + Sepete Ekle)
       bottomNavigationBar: Container(
         padding: const EdgeInsets.fromLTRB(24, 16, 24, 24),
         decoration: BoxDecoration(
@@ -178,7 +163,6 @@ class ProductDetailScreen extends StatelessWidget {
         child: SafeArea(
           child: Row(
             children: [
-              // Fiyat Bilgisi
               Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -201,8 +185,6 @@ class ProductDetailScreen extends StatelessWidget {
                 ],
               ),
               const SizedBox(width: 20),
-
-              // Sepete Ekle / Adet Güncelle Butonu
               Expanded(
                 child: SizedBox(
                   height: 52,

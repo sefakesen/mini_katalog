@@ -58,35 +58,29 @@ void main() {
       expect(cart.totalCount, 0);
       expect(cart.totalPrice, 0.0);
 
-      // Ürün 1 ekle
       cart.addToCart(product1);
       expect(cart.totalCount, 1);
       expect(cart.totalPrice, 999.0);
       expect(cart.isInCart(product1), true);
 
-      // Ürün 1 tekrar ekle (adet artmalı)
       cart.addToCart(product1);
       expect(cart.totalCount, 2);
       expect(cart.items.first.quantity, 2);
       expect(cart.totalPrice, 1998.0);
 
-      // Ürün 2 ekle
       cart.addToCart(product2);
       expect(cart.totalCount, 3);
       expect(cart.totalPrice, 2097.0);
       expect(cart.formattedTotalPrice, '\$2097');
 
-      // Adet azaltma
       cart.removeSingleItem(product1);
       expect(cart.totalCount, 2);
       expect(cart.getQuantity(product1), 1);
 
-      // Tamamen silme
       cart.removeFromCart(product1);
       expect(cart.totalCount, 1);
       expect(cart.isInCart(product1), false);
 
-      // Sepeti temizleme
       cart.clearCart();
       expect(cart.totalCount, 0);
       expect(cart.items.isEmpty, true);
@@ -99,13 +93,8 @@ void main() {
       await tester.pumpWidget(const MiniKatalogApp());
       await tester.pumpAndSettle();
 
-      // Discover başlığı kontrolü
       expect(find.text('Discover'), findsOneWidget);
-
-      // Arama alanı kontrolü
       expect(find.byType(TextField), findsOneWidget);
-
-      // Sepet butonu kontrolü
       expect(find.byIcon(Icons.shopping_bag_outlined), findsOneWidget);
     });
   });

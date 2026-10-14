@@ -25,7 +25,6 @@ class BannerCard extends StatelessWidget {
           'assets/images/banner.png',
           fit: BoxFit.cover,
           errorBuilder: (context, error, stackTrace) {
-            // Yedek olarak şık bir gradyan banner gösterimi
             return Container(
               decoration: const BoxDecoration(
                 gradient: LinearGradient(

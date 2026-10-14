@@ -45,7 +45,6 @@ class ProductCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Ürün Görsel Alanı (Hafif gri yuvarlak zemin)
                 Expanded(
                   child: Container(
                     width: double.infinity,
@@ -61,8 +60,6 @@ class ProductCard extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 10),
-
-                // Ürün Başlığı
                 Text(
                   product.name,
                   style: const TextStyle(
@@ -75,8 +72,6 @@ class ProductCard extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                 ),
                 const SizedBox(height: 3),
-
-                // Alt Başlık / Slogan
                 Text(
                   product.tagline,
                   style: const TextStyle(
@@ -87,8 +82,6 @@ class ProductCard extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                 ),
                 const SizedBox(height: 6),
-
-                // Fiyat ve Sepete Ekle Butonu
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -98,7 +91,7 @@ class ProductCard extends StatelessWidget {
                       style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w700,
-                        color: Color(0xFF2563EB), // Mavi vurgulu fiyat
+                        color: Color(0xFF2563EB),
                       ),
                     ),
                     InkWell(
